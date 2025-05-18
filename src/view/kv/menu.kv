@@ -1,0 +1,39 @@
+<MenuScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "BATALLA NAVAL"
+            font_size: 32
+            bold: True
+            size_hint_y: 0.2
+
+        Button:
+            text: "1. Jugar sin registro"
+            on_release:
+                app.root.get_screen("juego").ids.ancho_input.text = "10"
+                app.root.get_screen("juego").ids.alto_input.text = "10"
+                app.root.get_screen("juego").ids.naves_input.text = "5"
+                app.root.current = "juego"
+
+        Button:
+            text: "2. Registrarse"
+            on_release:
+                app.root.current = "registro"
+
+        Button:
+            text: "3. Iniciar sesión"
+            on_release:
+                app.root.current = "login"
+
+        Button:
+            text: "4. Ver puntuaciones"
+            on_release:
+                app.root.current = "puntuaciones"
+
+        Button:
+            text: "5. Salir"
+            on_release:
+                app.stop()
