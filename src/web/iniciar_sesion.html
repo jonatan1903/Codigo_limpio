@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="estilos.css" />
+
+</head>
+<body>
+  <h2>Iniciar Sesión</h2>
+  <form id="form-iniciar-sesion">
+    <label for="nombre">Nombre:</label><br />
+    <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+    <label for="contraseña">Contraseña:</label><br />
+    <input type="password" id="contraseña" name="contraseña" required /><br /><br />
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <br />
+
+  <button id="btn-regresar-menu">Regresar al menú</button>
+
+  <script src="iniciar_sesion.js"></script>
+  <script>
+    document.getElementById('btn-regresar-menu').addEventListener('click', () => {
+      window.location.href = 'index.html';  
+    });
+  </script>
+</body>
+</html>

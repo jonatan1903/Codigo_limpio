@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batalla Naval</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    .contenido-central {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .botones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenido-central">
+    <h1>Bienvenido al juego de Batalla Naval</h1>
+  </div>
+
+  <div class="botones">
+    <button onclick="window.location.href='jugar_sin_registro.html'">Jugar sin registro</button>
+    <button onclick="window.location.href='registrarse.html'">Registrarse</button>
+    <button onclick="window.location.href='iniciar_sesion.html'">Iniciar sesión</button>
+    <button onclick="window.location.href='puntuacion.html'">Puntuaciones</button>
+    <button onclick="cerrarVentana()">Salir</button>
+  </div>
+
+  <script>
+    function cerrarVentana() {
+      window.close();
+
+      setTimeout(() => {
+        if (!window.closed) {
+          alert("Por motivos de seguridad del navegador, esta pestaña no se puede cerrar automáticamente. Puedes cerrarla manualmente.");
+        }
+      }, 200);
+    }
+  </script>
+
+</body>
+</html>

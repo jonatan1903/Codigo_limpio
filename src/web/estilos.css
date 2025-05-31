@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenedor general para centrar y limitar ancho */
+.container {
+  max-width: 400px;  /* ancho máximo */
+  width: 90%;        /* responsive */
+  margin: 0 auto;    /* centra horizontal */
+}
+
+/* Títulos con fondo solo detrás del texto */
+h1, h2 {
+  display: inline-block; /* solo ocupa el espacio del texto */
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 6px #00000088;
+}
+
+/* Formularios centrados y contenido limitado */
+form {
+  background: #2a3a5f;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000099;
+  margin: 1rem auto 2rem auto;
+  max-width: 400px;
+  width: 90%;
+  text-align: left; /* inputs alineados a la izquierda */
+}
+
+/* Labels y inputs */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Botones full ancho dentro del contenedor */
+button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 700;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Contenedor tablero */
+#tablero-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botones del menú */
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 2rem 0;
+  max-width: 300px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botones button {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  form, .botones, .container {
+    width: 90%;
+  }
+}

@@ -1,0 +1,38 @@
+<PuntuacionesScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "MEJORES PUNTUACIONES"
+            font_size: 28
+            bold: True
+            size_hint_y: 0.2
+
+        ScrollView:
+            size_hint_y: 0.7
+
+            Label:
+                text: root.puntuaciones_texto
+                font_name: 'RobotoMono-Regular'
+                font_size: 16
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                halign: 'left'
+                valign: 'top'
+                padding: [20, 20]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: 0.1
+            spacing: 10
+
+            Button:
+                text: "Actualizar"
+                on_release: root.actualizar_puntuaciones()
+
+            Button:
+                text: "Volver al Menú"
+                on_release: root.volver()
